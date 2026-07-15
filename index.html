@@ -3,42 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>My Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-        <p>This is a simple HTML webpage.</p>
-    </header>
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p>This is a simple HTML page with CSS and JavaScript.</p>
 
-    <nav>
-        <a href="#">Home</a> |
-        <a href="#">About</a> |
-        <a href="#">Services</a> |
-        <a href="#">Contact</a>
-    </nav>
+        <button onclick="showMessage()">Click Me</button>
 
-    <hr>
+        <p id="message"></p>
+    </div>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! I am learning HTML and web development.</p>
-    </section>
-
-    <section>
-        <h2>My Services</h2>
-        <ul>
-            <li>Web Design</li>
-            <li>HTML Development</li>
-            <li>Basic CSS</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>&copy; 2026 My Website. All Rights Reserved.</p>
-    </footer>
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerHTML = "Hello! You clicked the button.";
+        }
+    </script>
 
 </body>
 </html>
